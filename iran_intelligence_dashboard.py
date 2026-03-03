@@ -7,8 +7,6 @@
   · Live ADS-B contact summary (from your CSV)
   · Sustainment Decay Model — "Countdown to Resupply"
   · Multi-INT Readiness Timeline
-  · 7-Day Monitoring Plan tracker
-  · LinkedIn-ready insight summaries
   
   HOW TO RUN:
   ─────────────────────────────────────────────────
@@ -594,17 +592,6 @@ with tab1:
     st.markdown("### ⏱ Sustainment Decay Model — Countdown to Resupply")
     st.markdown("""
     <div class='insight-box'>
-    <b>🔍 THE LINKEDIN INSIGHT:</b><br>
-    Based on published USAF/USN logistics doctrine and confirmed open-source data,
-    the current Iran perimeter force can maintain its surge sortie rate for approximately
-    <b>12–14 days</b> before fuel reserves at forward bases drop below 25%,
-    triggering a mandatory maritime resupply cycle. The next resupply window
-    is approximately <b>March 12–14, 2026</b>.
-    If no resupply occurs, sortie rates begin degrading around Day 10 —
-    meaning the window for maximum operational tempo is <b>now closing</b>.
-    This is the "Countdown to De-escalation or Surge" signal.
-    </div>
-    """, unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
     with c1:
@@ -731,102 +718,3 @@ with tab4:
     Ground + Maritime logistics = 60% of total score — this is not an air-only deployment.
     </div>
     """, unsafe_allow_html=True)
-
-
-# ════════════════════════════════════════════════════════════════════════
-# TAB 5 — 7-DAY MONITORING PLAN
-# ════════════════════════════════════════════════════════════════════════
-with tab5:
-    st.markdown("### 📋 7-Day Monitoring Plan — March 1–7, 2026")
-    st.markdown("""
-    <div class='insight-box'>
-    This plan uses only publicly available tools and data sources consistent
-    with the methodology used throughout this project.
-    All monitoring targets publicly broadcast signals.
-    </div>
-    """, unsafe_allow_html=True)
-
-    plan_data = [
-        {
-            "Day": "Day 1 — Mar 1",
-            "Priority": "🔴 CRITICAL",
-            "Task": "Run ADS-B tracker — all 5 scan boxes",
-            "What to Watch": "New ORBIT contacts? RJA504/MSR025 still present?",
-            "Tool": "OpenSky OAuth2 tracker (Cell 1–9)",
-            "Signal Meaning": "Persistent orbits = sustained ops tempo maintained",
-        },
-        {
-            "Day": "Day 2 — Mar 2",
-            "Priority": "🔴 CRITICAL",
-            "Task": "Check USNI News Fleet Tracker",
-            "What to Watch": "USS Ford / Lincoln position update",
-            "Tool": "news.usni.org/fleet-tracker",
-            "Signal Meaning": "CSGs moving east = escalation; west = de-escalation",
-        },
-        {
-            "Day": "Day 3 — Mar 3",
-            "Priority": "🟠 HIGH",
-            "Task": "Scan ADS-B for RCH/REACH callsign surge",
-            "What to Watch": "Increase in AMC cargo callsigns inbound Al Udeid",
-            "Tool": "ADS-B Exchange globe.adsbexchange.com",
-            "Signal Meaning": "Cargo surge = resupply cycle beginning (Day 3–4 of model)",
-        },
-        {
-            "Day": "Day 4 — Mar 4",
-            "Priority": "🟠 HIGH",
-            "Task": "Check DLA Energy public drawdown data",
-            "What to Watch": "JP-8 drawdown rate at DFSP Bahrain vs baseline",
-            "Tool": "dla.mil/Energy",
-            "Signal Meaning": "Accelerating drawdown = surge ops continuing above model",
-        },
-        {
-            "Day": "Day 5 — Mar 5",
-            "Priority": "🟡 MEDIUM",
-            "Task": "OSINT review: AP/Reuters/USNI for diplomatic signals",
-            "What to Watch": "Any Iran back-channel communication? UN engagement?",
-            "Tool": "Reuters, AP, Al-Monitor",
-            "Signal Meaning": "Diplomatic movement = potential de-escalation window",
-        },
-        {
-            "Day": "Day 6 — Mar 6",
-            "Priority": "🟡 MEDIUM",
-            "Task": "AIS check for Djibouti/Arabian Sea vessel activity",
-            "What to Watch": "USNS Medgar Evers position — still with CSG?",
-            "Tool": "USNI Fleet Tracker + AISHub",
-            "Signal Meaning": "AKE departure from CSG = ammo resupply complete or paused",
-        },
-        {
-            "Day": "Day 7 — Mar 7",
-            "Priority": "🔴 CRITICAL",
-            "Task": "Full session: ADS-B + OSINT + sustainment model update",
-            "What to Watch": "All indicators vs Day 1 baseline — trending up or down?",
-            "Tool": "Full tracker run + update this dashboard",
-            "Signal Meaning": "Readiness score change from 94% tells the whole story",
-        },
-    ]
-
-    for item in plan_data:
-        color = "#FF2D2D" if "CRITICAL" in item["Priority"] else \
-                "#FF6600" if "HIGH" in item["Priority"] else "#FFB300"
-        st.markdown(f"""
-        <div style='background:#161b22;border-left:4px solid {color};
-             padding:12px 16px;border-radius:4px;margin:8px 0;
-             font-family:monospace'>
-        <b style='color:{color}'>{item["Day"]} — {item["Priority"]}</b><br>
-        <b>Task:</b> {item["Task"]}<br>
-        <b>Watch for:</b> {item["What to Watch"]}<br>
-        <b>Tool:</b> <code>{item["Tool"]}</code><br>
-        <b>Signal:</b> <i>{item["Signal Meaning"]}</i>
-        </div>
-        """, unsafe_allow_html=True)
-
-
-# ── Footer ────────────────────────────────────────────────────────────────
-st.markdown("---")
-st.markdown("""
-<p style='text-align:center;font-family:monospace;font-size:0.8em;color:#444'>
-UNCLASSIFIED — All data from public sources — ADS-B public broadcast + AIS public broadcast + published OSINT<br>
-OpenSky Network | USNI News | AP | Reuters | The War Zone | Aviation Week | DLA Energy<br>
-Educational and analytical use only
-</p>
-""", unsafe_allow_html=True)
