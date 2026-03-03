@@ -19,7 +19,6 @@
     1. Push this file to a GitHub repo
     2. Go to https://share.streamlit.io
     3. Connect your GitHub repo
-    4. Deploy — get a public URL to share on LinkedIn
     
   Option C — Google Colab (quick preview):
     !pip install streamlit pyngrok -q
@@ -582,7 +581,6 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🗺 Force Posture Map",
     "📡 ADS-B Contacts",
     "📈 Multi-INT Buildup",
-    "📋 7-Day Monitoring Plan",
 ])
 
 # ════════════════════════════════════════════════════════════════════════
