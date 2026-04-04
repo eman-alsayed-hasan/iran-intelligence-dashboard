@@ -1201,13 +1201,6 @@ with tab6:
         · VesselFinder — vesselfinder.com
         </div>
         """, unsafe_allow_html=True)
-
-SUSTAINMENT MODEL STATUS (Day 35 of war):
-⛽ Fuel levels at forward bases: {fuel_remaining_pct:.0f}% estimated
-💥 Ammunition levels: {ammo_remaining_pct:.0f}% estimated
-👤 Personnel readiness: {pers_remaining_pct:.0f}% (35-day fatigue curve)
-✈ Daily sortie rate: ~{sortie_remaining:.0f} sorties/day (from {total_ac} aircraft)
-
 TRACKER PERFORMANCE:
 · Feb 28 session: 4 contacts — 2 persistent tanker orbits confirmed (Al Udeid + Bahrain)
 · Apr 3 session: 146 contacts — filter too loose, 144 were commercial airliners
