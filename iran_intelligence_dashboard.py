@@ -1202,27 +1202,6 @@ with tab6:
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("---")
-    st.markdown("#### Export — LinkedIn Analysis Template")
-    linkedin_text = f"""🔍 INTELLIGENCE INSIGHT — Day 35 of the Iran War | April 4, 2026
-
-Using open-source ADS-B tracking (adsb.fi, ADS-B Exchange), satellite imagery,
-and published defence reporting, I've been monitoring US military activity
-around Iran since before Operation Epic Fury began.
-
-TODAY'S KEY FINDING:
-14 hours after Iran shot down a US F-15E Strike Eagle, my tracker detected
-RAIDR45 (ICAO hex ae6c19 — confirmed US DoD AE-block) over the Eastern Mediterranean
-at 24,000 ft / 250 kts. This is the first confirmed US military ICAO hex in
-this tracking series. The Royal Air Force has now been detected near RAF Akrotiri
-on two consecutive days (RRR9964 on Apr 3, RRR6629 on Apr 4).
-
-SUSTAINMENT MODEL STATUS (Day 35 of war):
-⛽ Fuel levels at forward bases: {fuel_remaining_pct:.0f}% estimated
-💥 Ammunition levels: {ammo_remaining_pct:.0f}% estimated
-👤 Personnel readiness: {pers_remaining_pct:.0f}% (35-day fatigue curve)
-✈ Daily sortie rate: ~{sortie_remaining:.0f} sorties/day (from {total_ac} aircraft)
-
 TRACKER PERFORMANCE:
 · Feb 28 session: 4 contacts — 2 persistent tanker orbits confirmed (Al Udeid + Bahrain)
 · Apr 3 session: 146 contacts — filter too loose, 144 were commercial airliners
